@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*
+{
+    font-family: 'Oswald', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+html, head, body
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    min-height: 460px;
+    background: no-repeat center center fixed;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#main
+{
+    display: flex;
+
+    width: 600px;
+    height: calc(100% - 20px); 
+
+    margin: 0 auto;
+
+    border: 4px solid black;
+    background: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 25px 5px rgba(0,0,0,.5);
+
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form, #reg-button
+{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+input, #reg-button
+{      
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+
+    width: 90%;
+    height: 70px;
+    margin: 15px 0;
+
+    text-align: center;
+
+    border: 4px solid black;
+    background: rgba(0,0,0,0);
+/*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5); */
+}
+
+#i-button
+{
+    transition: .3s;
+
+    border: 4px solid transparent;
+    outline: 4px solid black;
+}
+
+#i-button:hover, #reg-button:hover
+{
+    transition: .3s;
+
+    color: rgb(38,46,54);
+    background-color: black;
+}
+
+#logo
+{
+    font-size: 46px;
+
+    display: flex;
+
+    width: 100%;
+    height: 150px;
+
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#reg-button
+{
+    height: 80px;
+}
+#reg-button span
+{
+    font-size: 16px;
+}
+
+/*
+@media (max-height: 560px) 
+{
+    #logo, h2 { display: none }
+}
+*/
+
+#radios
+{
+    display: flex;
+    width: 80%;
+    display: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#radios div
+{
+    width: 100px;
+}
+
+#radios div input
+{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+#radios div label
+{
+    display: block;
+    text-align: center;
+}

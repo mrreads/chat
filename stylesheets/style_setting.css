@@ -1,0 +1,256 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*
+{
+    font-family: 'Oswald', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+html, head, body
+{
+    height: 100%;
+}
+
+body
+{
+    /** Да, у меня BODY флексит,
+    это так как я из высоты вычитаю 15px
+    и чтобы MAIN div выравнивался по центру.
+    Вообщем, я хотел сделать небольшие отступы сверху и снизу. **/
+    display: flex;
+
+    background: no-repeat center center fixed;
+    background-image: linear-gradient(10deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 460px;  
+}
+
+#e-button
+{
+    width: 40px;
+    height: 40px;
+    padding: 0 6px;
+
+    transition: .3s;
+
+    border: 2px solid black;
+    border-left: 0 solid white;
+    background-color: black;
+    background-image: url('../icons/logout.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+#e-button:hover
+{
+    transition: .3s;
+
+    border: 2px solid white;
+    border-left: 0 solid black;
+
+    filter: invert(1);
+}
+
+
+#main
+{
+    display: flex;
+
+    width: 90%;
+    min-width: 420px;
+    height: calc(100% - 15px);
+    margin: 0 auto;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#chat-box
+{
+    display: flex;
+    
+
+    width: 98%;
+    min-height: 100px;
+    margin: 0 0 10px auto;
+
+
+    flex-flow: column nowrap;
+}
+
+#first
+{
+/*    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+*/
+
+    width: 40%;
+    min-width: 420px;
+    height: 100%;
+}
+
+#second
+{
+    display: flex;
+
+    height: 100%;
+
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.user-count
+{
+    padding: 7px 15px;
+
+    text-align: center;
+    word-wrap: none;
+
+    color: white;
+    background-color: black;
+}
+
+
+#log-out, .user-count, #c-theme, .back
+{
+    margin: 0px 0px 10px 0;
+}
+
+#c-theme
+{
+    width: 40px;
+    height: 40px;
+    padding: 0 6px;
+
+    transition: .3s;
+
+    border: 2px solid black;
+    border-left: 0 solid white;
+    background-color: black;
+    background-image: url('../icons/theme.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+#c-theme:hover
+{
+    transition: .3s;
+
+    border: 2px solid white;
+    border-left: 0 solid black;
+
+    filter: invert(1);
+}
+
+.back
+{
+    width: 60px;
+    height: 60px;
+
+    transition: .3s;
+
+    border: 2px solid black;
+    border-left: 0 solid white;
+    background-color: black;
+    background-color: black;
+    background-image: url('../icons/back.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.back:hover
+{
+    transition: .3s;
+
+    border: 2px solid white;
+    border-left: 0 solid white;
+    border-left: 0 solid black;
+
+    filter: invert(1);
+}
+
+
+#cn-name  ,#cp-name
+{
+    background-color: black;
+}
+
+#cn-name h1, #cp-name h1
+{
+    margin-bottom: 15px;
+}
+
+.block-info
+{
+    display: flex;
+    height: 60px;
+    border: 2px solid black;
+    border-left: 0 solid white;
+    background-color: black;
+
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#cn-name, .block-info, .block-info-first
+{
+    margin-bottom: 15px;
+}
+
+#chat-box form
+{
+    display: flex;
+
+    padding: 15px;
+
+    border: 2px solid black;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+#chat-box form input
+{
+    font-size: 23px;
+
+    height: 50px;
+    margin: 1px 0;
+
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+}
+
+#chat-box h1
+{
+    text-align: center;
+
+    color: white;
+}
+
+#cn-button, #cp-button
+{
+    font-weight: bold;
+    transition: .3s;
+}
+
+#cn-button:hover, #cp-button:hover
+{
+    transition: .3s;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+}
