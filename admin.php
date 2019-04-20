@@ -9,6 +9,7 @@ if (empty($_SESSION['username']))
 }
 $name = $_SESSION['username'];
 
+
 include "send.php";
 require_once 'connection.php';
 ?>
@@ -78,8 +79,10 @@ $query = "SELECT name_user, time_message, text_message, id_message  FROM users, 
 $result = mysqli_query($link, $query);
 
 echo "<div id='chat-box'>";
-if ($result) {
-    while ($row_data = mysqli_fetch_row($result)) {
+if ($result) 
+{
+    while ($row_data = mysqli_fetch_row($result)) 
+    {
         echo "	<div>";
         echo "		<p class='name'> [$row_data[3]] $row_data[0] </p>";
         echo "		<p class='date'> $row_data[1] </p>";

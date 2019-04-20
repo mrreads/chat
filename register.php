@@ -10,6 +10,8 @@ if (isset($_SESSION['username']))
 /* СКРИПТ РЕГИСТРАЦИИ */
 require_once "connection.php";
 
+
+
 $login = $_POST['reg-login'];
 $name = $_POST['reg-name'];
 $password = $_POST['reg-pass'];
@@ -25,6 +27,11 @@ if ($row == 0)
 {
     $query_reg = "INSERT INTO `users` (`id_user`, `login_user`, `name_user`, `password_user`, `id_role`, `id_grupi`) VALUES (NULL, '$login', '$name', '$password', 2, '$choose');";
     $send = mysqli_query($link, $query_reg);
+}
+
+if ($send)
+{
+    header('Location: auth.php');
 }
 ?>
 
