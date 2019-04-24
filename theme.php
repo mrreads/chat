@@ -14,4 +14,3 @@ if ($themeChooser == 3)
 
 header('Location: auth.php');
 exit();
-?>

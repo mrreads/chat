@@ -40,3 +40,18 @@
     color: black;
     background-color: white;
 }
+
+.del_solo_msg
+{
+    display: inline-block;
+
+    background-image: url("../icons/trash.png");
+    background-repeat: no-repeat;
+    background-position: 100% 60%;
+    background-size: 80%;
+}
+
+.msg_solo
+{
+    opacity: 0;
+}

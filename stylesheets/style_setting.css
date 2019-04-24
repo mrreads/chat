@@ -1,12 +1,11 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Oswald');
+﻿@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 *
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
 
     margin: 0;
     padding: 0;
-
 }
 
 html, head, body
@@ -22,13 +21,13 @@ body
     Вообщем, я хотел сделать небольшие отступы сверху и снизу. **/
     display: flex;
 
+    min-height: 460px;
+
     background: no-repeat center center fixed;
-    background-image: linear-gradient(10deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: linear-gradient(10deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
 
-    justify-content: center;
     align-items: center;
-
-    min-height: 460px;  
+    justify-content: center;
 }
 
 #e-button
@@ -37,12 +36,12 @@ body
     height: 40px;
     padding: 0 6px;
 
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid black;
     border-left: 0 solid white;
     background-color: black;
-    background-image: url('../icons/logout.png');
+    background-image: url("../icons/logout.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -50,7 +49,7 @@ body
 
 #e-button:hover
 {
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid white;
     border-left: 0 solid black;
@@ -68,31 +67,28 @@ body
     height: calc(100% - 15px);
     margin: 0 auto;
 
-    flex-flow: row nowrap;
     align-items: center;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 
 #chat-box
 {
     display: flex;
-    
 
     width: 98%;
     min-height: 100px;
     margin: 0 0 10px auto;
-
 
     flex-flow: column nowrap;
 }
 
 #first
 {
-/*    display: flex;
+    /*    display: flex;
     align-items: center;
     flex-flow: column nowrap;
 */
-
     width: 40%;
     min-width: 420px;
     height: 100%;
@@ -104,8 +100,8 @@ body
 
     height: 100%;
 
-    flex-flow: column nowrap;
     align-items: flex-start;
+    flex-flow: column nowrap;
 }
 
 .user-count
@@ -131,12 +127,12 @@ body
     height: 40px;
     padding: 0 6px;
 
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid black;
     border-left: 0 solid white;
     background-color: black;
-    background-image: url('../icons/theme.png');
+    background-image: url("../icons/theme.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -144,7 +140,7 @@ body
 
 #c-theme:hover
 {
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid white;
     border-left: 0 solid black;
@@ -157,13 +153,13 @@ body
     width: 60px;
     height: 60px;
 
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid black;
     border-left: 0 solid white;
     background-color: black;
     background-color: black;
-    background-image: url('../icons/back.png');
+    background-image: url("../icons/back.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -171,7 +167,7 @@ body
 
 .back:hover
 {
-    transition: .3s;
+    transition: 0.3s;
 
     border: 2px solid white;
     border-left: 0 solid white;
@@ -181,7 +177,7 @@ body
 }
 
 
-#cn-name  ,#cp-name
+#cn-name, #cp-name
 {
     background-color: black;
 }
@@ -194,13 +190,15 @@ body
 .block-info
 {
     display: flex;
+
     height: 60px;
+
     border: 2px solid black;
     border-left: 0 solid white;
     background-color: black;
 
-    flex-flow: column nowrap;
     align-items: center;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -230,8 +228,9 @@ body
     margin: 1px 0;
 
     text-align: center;
-    background-color: white;
+
     border: 2px solid black;
+    background-color: white;
 }
 
 #chat-box h1
@@ -244,13 +243,15 @@ body
 #cn-button, #cp-button
 {
     font-weight: bold;
-    transition: .3s;
+
+    transition: 0.3s;
 }
 
 #cn-button:hover, #cp-button:hover
 {
-    transition: .3s;
-    background-color: black;
-    border: 2px white solid;
+    transition: 0.3s;
+
     color: white;
+    border: 2px white solid;
+    background-color: black;
 }

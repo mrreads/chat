@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
 *
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
 
     margin: 0;
     padding: 0;
@@ -16,12 +16,14 @@ html, head, body
 body
 {
     display: flex;
-    min-height: 460px;
-    background: no-repeat center center fixed;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 
-    justify-content: center;
+    min-height: 460px;
+
+    background: no-repeat center center fixed;
+    background-image: linear-gradient(60deg, #29323C 0%, #485563 100%);
+
     align-items: center;
+    justify-content: center;
 }
 
 #main
@@ -29,16 +31,15 @@ body
     display: flex;
 
     width: 600px;
-    height: calc(100% - 20px); 
-
+    height: calc(100% - 20px);
     margin: 0 auto;
 
     border: 4px solid black;
-    background: rgba(0, 0, 0, .3);
-    box-shadow: 0 0 25px 5px rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 25px 5px rgba(0,0,0,0.5);
 
-    flex-flow: column nowrap;
     align-items: center;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -49,15 +50,13 @@ form, #reg-button
     width: 100%;
     height: 100%;
 
-    flex-flow: column nowrap;
     align-items: center;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
 input, #reg-button
-{      
-    text-decoration: none;
-    color: black;
+{
     font-size: 26px;
 
     width: 90%;
@@ -65,15 +64,17 @@ input, #reg-button
     margin: 15px 0;
 
     text-align: center;
+    text-decoration: none;
 
+    color: black;
     border: 4px solid black;
     background: rgba(0,0,0,0);
-/*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5); */
+    /*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5); */
 }
 
 #i-button
 {
-    transition: .3s;
+    transition: 0.3s;
 
     border: 4px solid transparent;
     outline: 4px solid black;
@@ -81,7 +82,7 @@ input, #reg-button
 
 #i-button:hover, #reg-button:hover
 {
-    transition: .3s;
+    transition: 0.3s;
 
     color: rgb(38,46,54);
     background-color: black;
@@ -96,8 +97,8 @@ input, #reg-button
     width: 100%;
     height: 150px;
 
-    flex-flow: column nowrap;
     align-items: center;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -120,10 +121,12 @@ input, #reg-button
 #radios
 {
     display: flex;
-    width: 80%;
     display: row nowrap;
-    justify-content: space-around;
+
+    width: 80%;
+
     align-items: center;
+    justify-content: space-around;
 }
 
 #radios div
@@ -135,11 +138,13 @@ input, #reg-button
 {
     width: 100%;
     height: 25px;
+
     text-align: center;
 }
 
 #radios div label
 {
     display: block;
+
     text-align: center;
 }

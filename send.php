@@ -34,4 +34,3 @@ if (isset($message_init))
     header('Location: auth.php');
     exit();
 }
-?>
