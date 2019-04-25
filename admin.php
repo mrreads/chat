@@ -1,16 +1,26 @@
 <?php
 
 session_start();
+require_once 'connection.php';
 
 if (empty($_SESSION['username'])) {
     header('Location: auth.php');
     exit();
 }
-$name = $_SESSION['username'];
 
+$name = $_SESSION['username'];
+$query_role = "SELECT id_role FROM users WHERE login_user = '$name'";
+$result_role = mysqli_query($link, $query_role);
+$role_data = mysqli_fetch_row($result_role);
+$role = $role_data[0];
+
+if ($role != 1) {
+    header('Location: auth.php');
+    exit();
+}
 
 include "send.php";
-require_once 'connection.php';
+
 ?>
 
 <!DOCTYPE html>
