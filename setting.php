@@ -2,7 +2,8 @@
 session_start();
 
 /* ЕСЛИ СЕССИЯ ПУСТА - РЕДИРЕКТ НА СТРАНИЦУ АВТОРИЗАЦИИ */
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['username'])) 
+{
     header('Location: auth.php');
     exit();
 }
@@ -19,7 +20,8 @@ $row_data = mysqli_fetch_row($row);
 $name = $row_data[0];
 $new_name = $_GET['cn-text'];
 
-if (isset($new_name)) {
+if (isset($new_name)) 
+{
     $query_cn = "UPDATE `users` SET `name_user` = '$new_name' WHERE `login_user` = '$username';";
     $result_cn = mysqli_query($link, $query_cn);
 }
@@ -107,12 +109,14 @@ AND login_user = '$username';";
 
                     $password_db = $row_data[0];
 
-                    if (isset($new_password) and isset($old_password)) {
-                            if ($password_db == $old_password) {
-                                    $query_cp = "UPDATE `users` SET `password_user` = '$new_password' WHERE `login_user` = '$username';";
-                                    $result_cp = mysqli_query($link, $query_cp);
-                                }
+                    if (isset($new_password) and isset($old_password)) 
+                    {
+                        if ($password_db == $old_password) 
+                        {
+                            $query_cp = "UPDATE `users` SET `password_user` = '$new_password' WHERE `login_user` = '$username';";
+                            $result_cp = mysqli_query($link, $query_cp);
                         }
+                    }
                     ?>
                     <h1> СМЕНА ПАРОЛЯ </h1>
                     <input type="password" name="cp-text-old" id="cp-text" required="" placeholder="ВВЕДИТЕ СТАРЫЙ ПАРОЛЬ">
@@ -120,9 +124,10 @@ AND login_user = '$username';";
                     <input type="submit" name="cp-button" id="cp-button" value="ПОМЕНЯТЬ">
                     <?
                     /* ЕСЛИ СМЕНИЛИ ПАРОЛЬ - НАПИСАТЬ ОБ ЭТОМ */
-                    if ($result_cp) {
-                            echo "<h1> ВЫ СМЕНИЛИ ПАРОЛЬ </h1>";
-                        }
+                    if ($result_cp)
+                    {
+                        echo "<h1> ВЫ СМЕНИЛИ ПАРОЛЬ </h1>";
+                    }
                     ?>
                 </form>
 

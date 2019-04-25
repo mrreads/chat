@@ -3,7 +3,8 @@
 session_start();
 require_once 'connection.php';
 
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['username'])) 
+{
     header('Location: auth.php');
     exit();
 }
@@ -14,7 +15,8 @@ $result_role = mysqli_query($link, $query_role);
 $role_data = mysqli_fetch_row($result_role);
 $role = $role_data[0];
 
-if ($role != 1) {
+if ($role != 1) 
+{
     header('Location: auth.php');
     exit();
 }
@@ -56,7 +58,8 @@ include "send.php";
                 $button_delete_message = $_POST['msg-del-button'];
 
 
-                if (isset($id_message)) {
+                if (isset($id_message)) 
+                {
                     $msg_del_query = "DELETE FROM messages WHERE id_message = '$id_message'";
                     $relust_msg_del = mysqli_query($link, $msg_del_query);
                     echo "<meta http-equiv='refresh' content='0'>";
@@ -69,7 +72,8 @@ include "send.php";
 
                 <?
                 $clear_button = $_GET['clear-button'];
-                if (isset($clear_button)) {
+                if (isset($clear_button)) 
+                {
                     $clear_query  = "DELETE FROM messages";
                     $result_clear = mysqli_query($link, $clear_query);
                 }
@@ -87,7 +91,8 @@ include "send.php";
             $result = mysqli_query($link, $query);
             echo "<div id='chat-box'>";
             if ($result) {
-                while ($row_data = mysqli_fetch_row($result)) {
+                while ($row_data = mysqli_fetch_row($result)) 
+                {
 
                     echo "	<div>";
                     echo "		<p class='name'> [$row_data[3]] $row_data[0] </p>";
@@ -98,7 +103,8 @@ include "send.php";
                         <?
                         $solo_msg_button = $_POST['msg_solo'];
 
-                        if (isset($solo_msg_button) and $row_data[3] == $solo_msg_button) {
+                        if (isset($solo_msg_button) and $row_data[3] == $solo_msg_button) 
+                        {
                             $solo_msg_res  = "DELETE FROM messages WHERE id_message = '$row_data[3]'";
                             $solo_msg_quer = mysqli_query($link, $solo_msg_res);
                             echo "<meta http-equiv='refresh' content='0'>";
@@ -120,7 +126,8 @@ include "send.php";
             $dir_patch = opendir(session_save_path());
             $users = 0;
             while ($file = readdir($dir_patch)) {
-                if (is_file(session_save_path() . "\/" . $file)) {
+                if (is_file(session_save_path() . "\/" . $file)) 
+                {
                     $arr = stat(session_save_path() . "\/" . $file);
                     if (time() - $arr[9] < 30) // подсчет только тех сессий, которые созданы не более 10 секунд назад.
                         {

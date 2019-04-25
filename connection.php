@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$database = 'chat';
+$database = 'chat_db';
 $user = 'root';
 $password = '';
 

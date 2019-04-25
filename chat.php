@@ -1,11 +1,28 @@
 <?php
 session_start();
 
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['username'])) 
+{
     header('Location: auth.php');
     exit();
 }
+
 $name = $_SESSION['username'];
+
+
+require_once 'connection.php';
+$name = $_SESSION['username'];
+$query_role = "SELECT id_role FROM users WHERE login_user = '$name'";
+$result_role = mysqli_query($link, $query_role);
+$role_data = mysqli_fetch_row($result_role);
+$role = $role_data[0];
+
+if ($role != 2) 
+{
+    header('Location: auth.php');
+    exit();
+}
+
 
 include "send.php";
 ?>
@@ -38,7 +55,8 @@ include "send.php";
 
             echo "<div id='chat-box'>";
             if ($result) {
-                while ($row_data = mysqli_fetch_row($result)) {
+                while ($row_data = mysqli_fetch_row($result)) 
+                {
                     echo "	<div>";
                     echo "		<p class='name'> $row_data[0] </p>";
                     echo "		<p class='date'> $row_data[1] </p>";
@@ -55,7 +73,8 @@ include "send.php";
             $dir_patch = opendir(session_save_path());
             $users = 0;
             while ($file = readdir($dir_patch)) {
-                if (is_file(session_save_path() . "\/" . $file)) {
+                if (is_file(session_save_path() . "\/" . $file)) 
+                {
                     $arr = stat(session_save_path() . "\/" . $file);
                     if (time() - $arr[9] < 30) // подсчет только тех сессий, которые созданы не более 10 секунд назад.
                         {

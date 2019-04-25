@@ -3,22 +3,25 @@ session_start();
 require_once 'connection.php';
 
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username'])) 
+{
         $login = $_SESSION['username'];
         $query_role = "SELECT id_role FROM users WHERE login_user = '$login'";
         $result_role = mysqli_query($link, $query_role);
         $role_data = mysqli_fetch_row($result_role);
         $role = $role_data[0];
 
-        if ($role == 2) {
-                header('Location: chat.php');
-                exit();
-            }
+        if ($role == 2) 
+        {
+            header('Location: chat.php');
+            exit();
+        }
 
-        if ($role == 1) {
-                header('Location: admin.php');
-                exit();
-            }
+        if ($role == 1) 
+        {
+            header('Location: admin.php');
+            exit();
+        }
     }
 
 /* СКРИПТ АВТОРИЗАЦИИ */
@@ -32,12 +35,13 @@ $query = "SELECT login_user, password_user FROM users";
 $result = mysqli_query($link, $query);
 
 while ($row = mysqli_fetch_row($result)) {
-        if (($login == $row[0]) and ($password == $row[1])) {
-                session_start();
-                $_SESSION['username'] = "$row[0]";
-                $_SESSION['theme'] = 1;
-                header('Location: auth.php');
-            }
+        if (($login == $row[0]) and ($password == $row[1])) 
+        {
+            session_start();
+            $_SESSION['username'] = "$row[0]";
+            $_SESSION['theme'] = 1;
+            header('Location: auth.php');
+        }
     }
 
 
@@ -59,9 +63,10 @@ while ($row = mysqli_fetch_row($result)) {
 
         <form id="auth" method="POST">
             <?
-            if (isset($button_auth) and isset($result)) {
-                    echo "<h1> ПОБРОБУЙТЕ СНОВА. </h1>";
-                }
+            if (isset($button_auth) and isset($result)) 
+            {
+                echo "<h1> ПОБРОБУЙТЕ СНОВА. </h1>";
+            }
             ?>
             <input type="text" name="auth-login" id="a-name" required="" autofocus placeholder="ЛОГИН">
             <input type="password" name="auth-pass" id="a-pass" required="" placeholder="ПАРОЛЬ">

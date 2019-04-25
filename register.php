@@ -1,10 +1,11 @@
 <?
 session_start();
 
-if (isset($_SESSION['username'])) {
-        header('Location: chat.php');
-        exit();
-    }
+if (isset($_SESSION['username'])) 
+{
+    header('Location: chat.php');
+    exit();
+}
 
 /* СКРИПТ РЕГИСТРАЦИИ */
 require_once "connection.php";
@@ -22,14 +23,16 @@ $query = "SELECT login_user FROM users WHERE login_user = '$login';";
 $result = mysqli_query($link, $query);
 $row = mysqli_num_rows($result);
 
-if ($row == 0) {
-        $query_reg = "INSERT INTO `users` (`id_user`, `login_user`, `name_user`, `password_user`, `id_role`, `id_grupi`) VALUES (NULL, '$login', '$name', '$password', 2, '$choose');";
-        $send = mysqli_query($link, $query_reg);
-    }
+if ($row == 0) 
+{
+    $query_reg = "INSERT INTO `users` (`id_user`, `login_user`, `name_user`, `password_user`, `id_role`, `id_grupi`) VALUES (NULL, '$login', '$name', '$password', 2, '$choose');";
+    $send = mysqli_query($link, $query_reg);
+}
 
-if ($send) {
-        header('Location: auth.php');
-    }
+if ($send) 
+{
+    header('Location: auth.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +44,8 @@ if ($send) {
     <link rel="stylesheet" href="stylesheets\style_auth.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body {
+        body 
+        {
             min-height: 780px;
         }
     </style>
@@ -51,9 +55,10 @@ if ($send) {
     <div id="main">
         <h1 id="logo">РЕГИСТРАЦИЯ</h1>
         <?
-        if ($send) {
-                echo "<h2>УСПЕШНАЯ РЕГИСТРАЦИЯ</h2>";
-            }
+        if ($send) 
+        {
+            echo "<h2>УСПЕШНАЯ РЕГИСТРАЦИЯ</h2>";
+        }
         ?>
         <form id="reg" method="POST">
             <input type="text" name="reg-login" id="a-name" required="" autofocus placeholder="ЛОГИН">
