@@ -23,9 +23,9 @@ if (isset($message_init))
 #   $new_message = preg_replace ($words, "[ЦЕНЗУРА]", $message);
 
     $query_id = "SELECT id_user FROM users WHERE login_user = '$name'";
-	$row_id = mysqli_query($link, $query_id);
-	$row_data_id = mysqli_fetch_row($row_id);
-	$result_name_id = $row_data_id[0];
+    $row_id = mysqli_query($link, $query_id);
+    $row_data_id = mysqli_fetch_row($row_id);
+    $result_name_id = $row_data_id[0];
 
     $query = "INSERT INTO `messages` (`id_message`, `text_message`, `time_message`, `id_author`) VALUES (NULL, '$new_message', NOW(), '$result_name_id');";
     $result = mysqli_query($link, $query);

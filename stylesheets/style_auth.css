@@ -2,114 +2,112 @@
 
 *
 {
-    font-family: "Oswald", sans-serif;
+	font-family: "Oswald", sans-serif;
 
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html, head, body
 {
-    height: 100%;
-    min-height: 575px;
+	min-width: 320px;
+	height: 100%;
+	min-height: 575px;
 }
 
 body
 {
-    display: flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    min-height: 460px;
+	min-height: 460px;
 
-    background: no-repeat center center fixed;
-    background-image: linear-gradient(60deg, #29323C 0%, #485563 100%);
-
-    align-items: center;
-    justify-content: center;
+	background: no-repeat center center fixed;
+	background-image: linear-gradient(60deg, #29323C 0%, #485563 100%);
 }
 
 #main
 {
-    display: flex;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
 
-    width: 600px;
-    height: calc(100% - 20px);
-    margin: 0 auto;
+	width: 600px;
+	height: calc(100% - 20px);
+	margin: 0 auto;
 
-    border: 4px solid black;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 25px 5px rgba(0,0,0,0.5);
-
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
+	border: 4px solid black;
+	background: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 25px 5px rgba(0,0,0,0.5);
 }
 
 form, #reg-button
 {
-    display: flex;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
 
-    width: 100%;
-    height: 100%;
-
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 input, #reg-button
 {
-    font-size: 26px;
+	font-size: 26px;
 
-    width: 90%;
-    height: 70px;
-    margin: 15px 0;
+	width: 90%;
+	height: 70px;
+	margin: 15px 0;
 
-    text-align: center;
-    text-decoration: none;
+	text-align: center;
+	text-decoration: none;
 
-    color: black;
-    border: 4px solid black;
-    background: rgba(0,0,0,0);
-    /*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5); */
+	color: black;
+	border: 4px solid black;
+	background: rgba(0,0,0,0);
+	/*    box-shadow: 0 0 5px 0 rgba(0,0,0,.5); */
 }
 
 #i-button
 {
-    transition: 0.3s;
+	transition: 0.3s;
 
-    border: 4px solid transparent;
-    outline: 4px solid black;
+	border: 4px solid transparent;
+	outline: 4px solid black;
 }
 
 #i-button:hover, #reg-button:hover
 {
-    transition: 0.3s;
+	transition: 0.3s;
 
-    color: rgb(38,46,54);
-    background-color: black;
+	color: rgb(38,46,54);
+	background-color: black;
 }
 
 #logo
 {
-    font-size: 46px;
+	font-size: 46px;
 
-    display: flex;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
 
-    width: 100%;
-    height: 150px;
-
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
+	width: 100%;
+	height: 150px;
 }
 
 #reg-button
 {
-    height: 80px;
+	height: 80px;
 }
 #reg-button span
 {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 /*
@@ -121,31 +119,30 @@ input, #reg-button
 
 #radios
 {
-    display: flex;
-    display: row nowrap;
+	display: flex;
+	display: row nowrap;
+	align-items: center;
+	justify-content: space-around;
 
-    width: 80%;
-
-    align-items: center;
-    justify-content: space-around;
+	width: 80%;
 }
 
 #radios div
 {
-    width: 100px;
+	width: 100px;
 }
 
 #radios div input
 {
-    width: 100%;
-    height: 25px;
+	width: 100%;
+	height: 25px;
 
-    text-align: center;
+	text-align: center;
 }
 
 #radios div label
 {
-    display: block;
+	display: block;
 
-    text-align: center;
+	text-align: center;
 }

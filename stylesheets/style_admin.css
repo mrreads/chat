@@ -1,57 +1,55 @@
 #three
 {
-    display: flex;
+	display: flex;
+	flex-flow: column nowrap;
 
-    height: 100%;
-    min-height: 320px;
-
-    flex-flow: column nowrap;
+	height: 100%;
+	min-height: 320px;
 }
 
 .bda-text
 {
-    padding: 7px 15px;
+	padding: 7px 15px;
 
-    color: white;
-    background-color: black;
+	color: white;
+	background-color: black;
 }
 
 .bd-action
 {
-    display: flex;
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
 
-    margin: 0px 0px 10px 0px;
-    padding: 0 0 5px 0px;
+	margin: 0px 0px 10px 0px;
+	padding: 0 0 5px 0px;
 
-    background-color: black;
-
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: center;
+	background-color: black;
 }
 
 .bd-action input
 {
-    width: 80%;
-    margin: 2px;
+	width: 80%;
+	margin: 2px;
 
-    text-align: center;
+	text-align: center;
 
-    color: black;
-    background-color: white;
+	color: black;
+	background-color: white;
 }
 
 .del_solo_msg
 {
-    display: inline-block;
+	display: inline-block;
 
-    background-image: url("../icons/trash.png");
-    background-repeat: no-repeat;
-    background-position: 100% 60%;
-    background-size: 80%;
+	background-image: url("../icons/trash.png");
+	background-repeat: no-repeat;
+	background-position: 100% 60%;
+	background-size: 80%;
 }
 
 .msg_solo
 {
-    opacity: 0;
+	opacity: 0;
 }
