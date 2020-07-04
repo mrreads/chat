@@ -13,7 +13,7 @@
 
 ## Использование сторонних библиотек:
 
-- **PHP Obscene Censor RUS**, фильтрация мата - [ссылка на исхожник](https://github.com/vearutop/php-obscene-censor-rus).
+- **PHP Obscene Censor RUS**, фильтрация мата - [ссылка на исходник](https://github.com/vearutop/php-obscene-censor-rus).
 
 ## Аккаунты для авторизации:
 
