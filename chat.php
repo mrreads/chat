@@ -36,11 +36,11 @@ include "send.php";
     <link rel="stylesheet" href="stylesheets\style_chat.css">
     <?
     if ($_SESSION['theme'] == 1)
-        echo '<link rel="stylesheet" href="stylesheets\style_chat.css">';
+        echo '<link rel="stylesheet" href=".\stylesheets\style_chat.css">';
     if ($_SESSION['theme'] == 2)
-        echo '<link rel="stylesheet" href="stylesheets\style_chat_dark.css">';
+        echo '<link rel="stylesheet" href=".\stylesheets\style_chat_dark.css">';
     if ($_SESSION['theme'] == 3)
-        echo '<link rel="stylesheet" href="stylesheets\style_chat_blue.css">';
+        echo '<link rel="stylesheet" href=".\stylesheets\style_chat_blue.css">';
     ?>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -70,6 +70,7 @@ include "send.php";
         ?>
 
         <?php
+        /*
         /////////////ВЫЧИСЛЕНИЕ КОЛИЧЕСТВА АКТИВНЫХ ПОЛЬЗОВАТЕЛЕЙ В ЧАТЕ/////////////////////
         $dir_patch = opendir(session_save_path());
         $users = 0;
@@ -83,6 +84,7 @@ include "send.php";
             }
         }
         closedir($dir_patch);
+        */
         ?>
 
         <form id="f-chat" method="GET" action="send.php">
@@ -101,7 +103,7 @@ include "send.php";
 
         echo "<p class='user-count'> Ваш ник: $result </p>";
         #echo "<p class='user-count'> Выш логин: " . $_SESSION['username'] . " </p>";
-        echo "<p class='user-count'> Активных юзеров: $users </p>";
+        #echo "<p class='user-count'> Активных юзеров: $users </p>";
 
         ?>
 

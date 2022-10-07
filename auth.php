@@ -27,9 +27,9 @@ if (isset($_SESSION['username']))
 /* СКРИПТ АВТОРИЗАЦИИ */
 
 
-$login = $_POST['auth-login'];
-$password = $_POST['auth-pass'];
-$button_auth = $_POST['auth-button'];
+@$login = $_POST['auth-login'];
+@$password = $_POST['auth-pass'];
+@$button_auth = $_POST['auth-button'];
 
 $query = "SELECT login_user, password_user FROM users";
 $result = mysqli_query($link, $query);
@@ -62,6 +62,12 @@ while ($row = mysqli_fetch_row($result))
 <body>
 <div id="main">
     <h1 id="logo">АВТОРИЗАЦИЯ</h1>
+
+    <h2> Аккаунты для авторизации: </h2>
+    <p>user:123</p>
+    <p>admin:123</p>
+    <p>qwe:123</p>
+    <p>zxc:zxc</p>
 
     <form id="auth" method="POST">
         <?

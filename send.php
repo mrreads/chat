@@ -8,8 +8,8 @@ include 'lib/ObsceneCensorRus.php';
 require_once "connection.php";
 
 
-session_start();
-$message_init = $_GET['chat-text'];
+@session_start();
+@$message_init = $_GET['chat-text'];
 
 if (isset($message_init))
 {

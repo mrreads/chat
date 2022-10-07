@@ -10,24 +10,24 @@ if (isset($_SESSION['username']))
 /* СКРИПТ РЕГИСТРАЦИИ */
 require_once "connection.php";
 
-$login = $_POST['reg-login'];
-$name = $_POST['reg-name'];
-$password = $_POST['reg-pass'];
+@$login = $_POST['reg-login'];
+@$name = $_POST['reg-name'];
+@$password = $_POST['reg-pass'];
 
-$choose = $_POST['choose'];
-$button = $_POST['reg-button'];
+@$choose = $_POST['choose'];
+@$button = $_POST['reg-button'];
 
 $query = "SELECT login_user FROM users WHERE login_user = '$login';";
 $result = mysqli_query($link, $query);
 $row = mysqli_num_rows($result);
 
-if ($row == 0)
+if ($row == 0 && @$_POST['reg-button'])
 {
     $query_reg = "INSERT INTO `users` (`id_user`, `login_user`, `name_user`, `password_user`, `id_role`, `id_grupi`) VALUES (NULL, '$login', '$name', '$password', 2, '$choose');";
     $send = mysqli_query($link, $query_reg);
 }
 
-if ($send)
+if (@$send)
 {
     header('Location: auth.php');
 }
@@ -51,7 +51,7 @@ if ($send)
 <div id="main">
     <h1 id="logo">РЕГИСТРАЦИЯ</h1>
     <?
-    if ($send)
+    if (@$send)
     {
         echo "<h2>УСПЕШНАЯ РЕГИСТРАЦИЯ</h2>";
     }

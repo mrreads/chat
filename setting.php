@@ -18,7 +18,7 @@ $row = mysqli_query($link, $query_login);
 $row_data = mysqli_fetch_row($row);
 
 $name = $row_data[0];
-$new_name = $_GET['cn-text'];
+@$new_name = $_GET['cn-text'];
 
 if (isset($new_name)) 
 {
@@ -100,8 +100,8 @@ AND login_user = '$username';";
                 <form id="cp-name" method="POST">
                     <?
                     /* СКРИПТ СМЕНЫ ПАРОЛЯ */
-                    $old_password = $_POST['cp-text-old'];
-                    $new_password = $_POST['cp-text-new'];
+                    @$old_password = $_POST['cp-text-old'];
+                    @$new_password = $_POST['cp-text-new'];
 
                     $query_password = "SELECT password_user FROM users WHERE login_user = '$username'";
 
@@ -125,7 +125,7 @@ AND login_user = '$username';";
                     <input type="submit" name="cp-button" id="cp-button" value="ПОМЕНЯТЬ">
                     <?
                     /* ЕСЛИ СМЕНИЛИ ПАРОЛЬ - НАПИСАТЬ ОБ ЭТОМ */
-                    if ($result_cp)
+                    if (@$result_cp)
                     {
                         echo "<h1> ВЫ СМЕНИЛИ ПАРОЛЬ </h1>";
                     }
